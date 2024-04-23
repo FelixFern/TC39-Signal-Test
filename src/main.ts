@@ -38,6 +38,8 @@ const TodoList = () => {
   `;
 };
 
+effect(() => TodoList());
+
 const count = new Signal.State<number>(0);
 const speedyCounter = new Signal.Computed(() => count.get() * 2);
 
@@ -56,5 +58,4 @@ const Counter = () => {
 	parent.innerHTML = `${count.get()} | ${speedyCounter.get()}`;
 };
 
-effect(() => TodoList());
 effect(() => Counter());

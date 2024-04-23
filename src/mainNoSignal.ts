@@ -38,6 +38,8 @@ const TodoList = () => {
       `;
 };
 
+TodoList();
+
 let count = 0;
 
 (window as Util).increment = () => {
@@ -58,3 +60,5 @@ const Counter = () => {
 	const parent = document.querySelector(".counter") as HTMLParagraphElement;
 	parent.innerHTML = `${count} | ${speedyCounter}`;
 };
+
+Counter();
